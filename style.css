@@ -598,30 +598,37 @@ footer a:hover{
         font-size: 24px;
         cursor: pointer;
     }
+    #header{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    body{
+        padding-top: 80px;
+    }
     .section-p1{
-    padding: 20px 40px;
+        padding: 20px 40px;
     }
     h1{
-    font-size: 22px;
-    line-height: 40px;
-    color: black;
-    }
-    h2{
         font-size: 20px;
-        line-height: 40px;
-        color: black;
+        line-height: 1.2;
     }
-    h4{
+
+    h2{
         font-size: 18px;
-        color: black;
-        line-height: 20px;
+        line-height: 1;
     }
-    p{
+
+    h4{
         font-size: 16px;
-        color: black;
-        margin :7px 0 20px 0;
-        line-height: 20px;
-        
+        line-height: 1.2;
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 5px 0 10px 0;
     }
 
     #navbar ul {
@@ -637,6 +644,7 @@ footer a:hover{
         background-color: rgb(228, 231, 235);
         padding: 80px 0 0 10px;
         transition: right 0.3s ease;
+        
     }
     #navbar ul.active {
         right: 0px;
@@ -645,7 +653,7 @@ footer a:hover{
     #navbar li {
         margin-bottom: 25px;
     }
-     #close{
+    #close{
         display: initial;
         position: absolute;
         top: 30px;
@@ -661,35 +669,25 @@ footer a:hover{
         justify-content: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: 60% center;
         width: 100%;
         height: 300px;
-        padding: 0 15px;
+        padding: 0 7px;
         padding-top: 50px;
     }
-    #hero h1,
-    #hero h4,
-    #hero h2,
-    #hero p{
-        margin: 1px 0;
-    }
-
-    #hero h1{
+    #hero h4{
         font-size: 14px;
-        line-height: 1;
     }
     #hero h2{
         font-size: 12px;
-        line-height: 1.2;
+        color: #222;
     }
-    #hero h4{
-        font-size: 10px;
-        line-height: 1.2;
+    #hero h1{
+        font-size: 13px;
     }
     #hero p{
-        font-size: 10px;
-        line-height: 1.2;
-        color: #000000;
+        color: #2b2626;
+        font-size: 7px;
     }
     #hero button{
         font-size: 11px;
@@ -730,6 +728,9 @@ footer a:hover{
     #products .container::-webkit-scrollbar {
         display: none;
     }
+    #products .container .pro:first-child {
+        margin-left: 8%;
+    }
 
     #products .pro {
         min-width: 200px;
@@ -757,6 +758,7 @@ footer a:hover{
     #products p::-webkit-scrollbar {
         display: none;           
     }
+    
      #banner {
         background-image: url(img/banner1.png);
         background-size: cover;
@@ -788,13 +790,13 @@ footer a:hover{
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        gap: 20px;  
+        gap: 40px;  
     }
     #banner1::-webkit-scrollbar {
         display: none;
     }
      #banner1 .banner-box {
-        min-width: 280px;
+        min-width: 320px;
         height: 180px;
         flex-shrink: 0;
         padding: 20px;
@@ -802,7 +804,7 @@ footer a:hover{
     }
    
     #banner1 .banner-box:first-child {
-        margin-left: 90%;
+        margin-left: 120%;
     }
     #banner1 h4 {
         margin: 20px 0 5px 0; 
@@ -827,54 +829,43 @@ footer a:hover{
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        gap: 20px;  
+        gap: 40px;  
     }
     #banner2::-webkit-scrollbar {
         display: none;
     }
      #banner2 .banner-box {
-        min-width: 280px;
+        min-width: 320px;
         height: 180px;
         flex-shrink: 0;
-        padding: 20px;
-       
+        padding-left: 50px;
     }
-   
     #banner2 .banner-box:first-child {
-        margin-left: 170%;
+        margin-left: 230%;
     }
     #newstext{
         background-image: url(img/banner9.png);
         background-size: cover;
         height: 150px; 
-    }
-    #newstext h4{
-        font-size: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-wrap: nowrap;
     }
     #newstext p{
     font-size: 12px;
-    padding-right: 30px;
-    line-height: 1.4;
-    max-width: 80%;     
+    padding-right: 20px;
+    line-height: 1.4;    
     white-space: normal;
     }
-     #newsletter .form {
-        display: flex;
+    #newstext .form{
         width: 100%;
     }
-
-    #newsletter input {
-        width: 100%; 
-        max-width: 100%;  
-        height: 35px;       
-        font-size: 16px;
-        padding: 10px;
+    #newstext input {
+        height: 2.2rem;
     }
-
-    #newsletter button {
-        width: 20%;        
-        height: 35px;      
-        font-size: 16px;
+    #newstext button {
+        height: 2.2rem;
+        padding: 5px;
     }
     
 }
