@@ -589,9 +589,98 @@ footer a:hover{
 #close{
     display: none;
 }
+/*shop page */
+#shop-hero{
+    background-image: url(img/newArrival/hero.png);
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;      
+    flex-direction: column;  
+    text-align: center;
+}
+#shop-hero h2,#shop-hero p{
+    color: #fff2e5;
+   
+}
+#pagination{
+    text-align: center;
+}
+#pagination a{
+    text-decoration: none;
+    background-color: #037a72;
+    font-weight: 600;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 15px 20px;
+
+}
+/*single product */
+#pdetails{
+    display: flex;
+    margin-top: 20px;
+}
+#pdetails .spi{
+    width: 30%;
+    margin-right: 50px;
+}
+.spm{
+    display: flex;
+    justify-content: space-between;
+    background-color: #bfc4c4;
+}
+.spg{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+#pdetails .single-pro-det{
+    width: 50%;
+    padding-top: 30px;
+}
+#pdetails .single-pro-det h6{
+    padding: 40px 0 15px 0;
+    font-size: 20px;
+}
+#pdetails .single-pro-det h4{
+    font-size: 26px;
+}
+#pdetails .single-pro-det h2{
+    font-size: 22px;
+    color: #00615a;
+}
+#pdetails .single-pro-det select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+#pdetails .single-pro-det input{
+    width: 50px;
+    height: 42px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#pdetails .single-pro-det button{
+    background-color: #00615a;
+    color: #ffffff;
+}
+#pdetails .single-pro-det h3{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#pdetails .single-pro-det span{
+    color: #2b2626;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 /* MOBILE VIEW */
-@media (max-width:799px) {
+@media (max-width:499px) {
    
     #mobile {
         display: block;
@@ -867,8 +956,33 @@ footer a:hover{
         height: 2.2rem;
         padding: 5px;
     }
-    
+    #shop-hero {
+    background-image: url(img/newArrival/hero.png);
+    height: 20vh;
+    width: 100%;
 }
+#shop-hero p{
+    font-size: 9px;
+}
+#pdetails{
+    display: flex;
+    flex-direction: column;
+}
+#pdetails .spi{
+    width: 100%;
+
+}
+#pdetails .single-pro-det {
+    width: 100%;
+}
+#pdetails .single-pro-det select {
+    display: block;
+    padding: 4px 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+    
+} 
 
 
    
