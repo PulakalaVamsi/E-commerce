@@ -588,7 +588,7 @@ footer a:hover{
 #close{
     display: none;
 }
-/*shop page */
+/*..................................shop page .......................................*/
 #shop-hero{
     background-image: url(img/newArrival/hero.png);
     height: 40vh;
@@ -923,6 +923,99 @@ footer a:hover{
     width: 120px;
     margin: 15px auto;
 }
+/*..............................Login Page............................*/
+
+.login-page{
+    padding-top: 0;
+}
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    min-height: 100vh;        
+    background: linear-gradient(135deg, #ff4da6, #7b2cbf);
+    margin-top: 0;
+    transition: 0.3s ease-in-out;
+}
+.login-con h2{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 0 30px 0;
+    text-align: center;
+    color: #dfe6e6;
+    font-size: 30px;
+    font-weight: 800;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+    text-align: left;
+}
+
+form input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.login-con button{
+    width: 150px;
+    padding: 8px 10px;
+    font-size: 14px;
+    margin: 30px auto 0;
+    background: linear-gradient(135deg, #ff4da6, #7b2cbf);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-links{ 
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 15px;
+    margin:50px 0 0 0;
+    cursor: pointer;
+}
+.login-con a{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-weight: 500;
+}
+.login-con a:hover{
+    text-decoration: underline;
+    color: #4181f8;
+    transition: 0.3s;
+}
+.login-con #forgotFrom a{
+    padding-top: 20px;
+}
+
+.login-con {
+    background: rgba(102, 101, 101, 0.6);
+    color: white;
+    padding: 30px;
+    width: 500px;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.hidden{
+    display: none;
+}
+.error{
+    color: rgb(255, 21, 21);
+    text-align: center;
+}
+.success{
+    color: #0feedf;
+    text-align: center;
+}
 
 /*................................ MOBILE VIEW ........................*/
 @media (max-width:499px) {
@@ -973,7 +1066,7 @@ footer a:hover{
         text-align: left;
         top: 0;
         right: -300px; 
-        height: 40vh;
+        height: 45vh;
         width: 200px;
         background-color: rgb(228, 231, 235);
         padding: 80px 0 0 10px;
@@ -1058,7 +1151,7 @@ footer a:hover{
         justify-content: flex-start;   
         overflow-x: auto;
         gap: 15px;
-        padding: 10px 5px;
+        padding: 0 5px;
     }
 
     #products .container::-webkit-scrollbar {
@@ -1337,7 +1430,17 @@ footer a:hover{
     width: 50px;
     margin:7px auto;
     font-size: 10px;
-}
+    }
+    .login {
+        min-height: 70vh;
+    }
+    button {
+     width: 70px;
+    
+    }
+       
+
+    
 
 } 
 /* ............................Tab View............................................. */
