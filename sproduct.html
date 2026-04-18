@@ -45,8 +45,8 @@
             </div>
             <div class="single-pro-det">
                 <h6> Shirts</h6>
-                <h4>Men's Fashion Shirts </h4>
-                <h2>$139.00</h2>
+                <h4 id="pname"></h4>
+                <h2 id="pprice"></h2>
                 <select>
                     <option>Select Size</option>
                     <option>S</option>
@@ -59,7 +59,7 @@
                 <input type="number" value="1">
                 <button class="white">Add To Cart</button>
                 <h3>Product Details</h3>
-                <span>The Premium Cotton T-shirt is crafted
+                <span id="pdesc">The Premium Cotton T-shirt is crafted
                     from high-quality 100% cotton fabric, 
                     ensuring superior softness and breathability 
                     for all-day comfort. Designed with a modern fit,
@@ -79,7 +79,7 @@
             <h2>New Arrival</h2>
             <p>Grab the best offers before they’re gone</p>
             <div class="container">
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=9';" >
                     <img src="img/newArrival/dress5.webp" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -95,7 +95,7 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=10';">
                     <img src="img/newArrival/dress7.webp" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -111,7 +111,7 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=11';">
                     <img src="img/newArrival/dress2.jpg" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -127,7 +127,7 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=12';">
                     <img src="img/newArrival/dress4.jpg" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -143,7 +143,7 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=13';" >
                     <img src="img/newArrival/dress6.webp" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -159,7 +159,7 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=14';" >
                     <img src="img/newArrival/dress8.webp" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -175,7 +175,7 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=15';" >
                     <img src="img/newArrival/dress1.avif" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -191,7 +191,7 @@
                     </div>
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
-                <div class="pro" >
+                <div class="pro" onclick="window.location.href='sproduct.html?id=16';">
                     <img src="img/newArrival/dress3.avif" alt="">
                     <div class="des">
                         <span>adidas</span>
@@ -275,21 +275,16 @@
             </div>
         </footer>  
         <script>
-            var mainimg = document.getElementById("mainp")
+           var mainimg = document.getElementById("mainp");
             var smallimg = document.getElementsByClassName("small");
-            smallimg[0].onclick = function(){
-                mainimg.src = smallimg[0].src;
+
+            for(let i=0; i<smallimg.length; i++){
+                smallimg[i].onclick = function(){
+                    mainimg.src = smallimg[i].src;
+                }
             }
-            smallimg[1].onclick = function(){
-                mainimg.src = smallimg[1].src;
-            }
-            smallimg[2].onclick = function(){
-                mainimg.src = smallimg[2].src;
-            }
-            smallimg[3].onclick = function(){
-                mainimg.src = smallimg[3].src;
-            }
+
         </script>     
-        <script src="script.js"></script>
+        <script src="script.js"> </script>
     </body>
 </html>
