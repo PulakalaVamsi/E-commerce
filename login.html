@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <body class="login-page">
+        <section id="login" class="login">
+            <div class="login-con">
+                <h2>Login</h2>
+                <div id="loginMess"></div>
+                <form id="loginForm">
+                    <label>Email</label>
+                    <input type="email" id="lEmail" placeholder="Enter your email" required>
+                    <label>Password</label>
+                    <input type="password" id="lPass" placeholder="Enter your password" required>
+                    <button type="submit">Submit</button>
+                    <div class="login-links">
+                        <a href="#" id="sregister">Register</a>
+                        <a href="#" id="sforgot">Forget Password</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section id="register" class="login">
+            <div class="login-con">
+                <h2>Register</h2>
+                <div id="registerMess"></div>
+                <form id="RegisterForm">
+                    <label>Name</label>
+                    <input type="text" id="rename" placeholder="Enter your name" required>
+                    <label>Email</label>
+                    <input type="email" id="reemail" placeholder="Enter your email" required>
+                    <label>Password</label>
+                    <input type="password" id="repass" placeholder="Enter your password" required>
+                    <label>Re-Password</label>
+                    <input type="password" id="rrepass" placeholder="Re-Enter Password" required>
+                    <label>Profile Photo (Optional)</label> 
+                    <input type="file" id="rephoto" accept="image/*">
+                    <button type="submit">Register</button>
+                    <a href="#" id="slogin1">Back to login</a>
+                </form>
+            </div>
+        </section>
+
+        <section id="forgot" class="login">
+            <div class="login-con">
+                <form id="forgotForm">
+                    <div id="forgotMess"></div>
+                    <label>Email</label>
+                    <input type="email" id="femail" placeholder="Enter Register Email" required>
+                    <label>Password</label>
+                    <input type="password" id="fpass" placeholder="Enter new password" required>
+                    <label>Re-Enter</label>
+                    <input type="password" id="frepass" placeholder="Re-Enter Password" required>
+                    <button type="submit">Update</button>
+                    <a href="#" id="slogin2">Back to login</a>                  
+                </form>
+            </div>
+        </section>
+
+        <footer class="section-p1">
+            <div class="footer-con">
+                <div class="col">
+                <img src="img/cara.png" class="logo" alt="">
+                <h4><strong>Contact</strong></h4>
+                <h5><strong>Address : </strong> 4-7,Pedda Laxmipuram</h5>
+                <h5><strong>Phone : </strong>+91 9347321729 / +91 7799143946</h5>
+                <h5><strong>Hours : </strong>9:00AM - 9:00PM Mon - Sat</h5>
+                <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign in</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="col inst">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play</p>
+                <div class="imag">
+                    <div class="row">
+                        <img src="img/footer/img4.png" class="logo" alt="">
+                    </div>
+                    <div class="row">
+                        <img src="img/footer/img3.webp" class="logo" alt="">
+                    </div>
+                </div>   
+                <p>Secured Payment GateWay</p>
+                <img src="img/footer/img4.webp" class="logo payment" >
+            </div>
+            </div>
+            
+            <div class="copy">
+                <p>© 2026, Vamsi Store - Full Stack E-Commerce Project</p>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                let login = document.getElementById("login");
+                let register = document.getElementById("register");
+                let forgot = document.getElementById("forgot");
+
+                let loginMess = document.getElementById("loginMess");
+                let registerMess = document.getElementById("registerMess");
+                let forgotMess = document.getElementById("forgotMess");
+
+                let loginForm = document.getElementById("loginForm");
+                let registerForm = document.getElementById("RegisterForm");
+                let forgotForm = document.getElementById("forgotForm");
+
+                let slogin1 = document.getElementById("slogin1");
+                let slogin2 = document.getElementById("slogin2");
+                let sregister = document.getElementById("sregister");
+                let sforgot = document.getElementById("sforgot");
+
+                function showform(form){
+                    login.classList.add("hidden");
+                    register.classList.add("hidden");
+                    forgot.classList.add("hidden");
+                    form.classList.remove("hidden");
+                }
+
+                slogin1.addEventListener("click", function(){
+                    showform(login);
+                    loginMess.textContent="";
+                });
+
+                slogin2.addEventListener("click", function(){
+                    showform(login);
+                    loginMess.textContent="";
+                });
+
+                sregister.addEventListener("click", function(){
+                    showform(register);
+                    registerMess.textContent="";
+                });
+
+                sforgot.addEventListener("click", function(){
+                    showform(forgot);
+                    forgotMess.textContent="";
+                });
+
+                registerForm.addEventListener("submit", function(e){
+                    e.preventDefault();
+
+                    let rname = document.getElementById("rename").value;
+                    let remail = document.getElementById("reemail").value;
+                    let repass = document.getElementById("repass").value;
+                    let rrepass = document.getElementById("rrepass").value;
+
+                    if(rname === "" || remail === "" || repass === "" || rrepass === ""){
+                        showmess("All fields are required","error",registerMess);
+                        return;
+                    }
+
+                    if(repass !== rrepass){
+                        showmess("Password Not Matched","error",registerMess);
+                        return;
+                    }
+
+                    let file = document.getElementById("rephoto").files[0];
+
+                    if(file){
+                        let reader = new FileReader();
+
+                        reader.onload = function(){
+                            let user = {
+                                name: rname,
+                                email: remail,
+                                pass: repass,
+                                photo: reader.result
+                            };
+
+                            localStorage.setItem("user", JSON.stringify(user));
+                            showmess("Registered Successfully","success",registerMess);
+                            showform(login);
+                        };
+
+                        reader.readAsDataURL(file);
+                    } else {
+                        let user = {
+                            name: rname,
+                            email: remail,
+                            pass: repass,
+                            photo: null
+                        };
+
+                        localStorage.setItem("user", JSON.stringify(user));
+                        showmess("Registered Successfully","success",registerMess);
+                        showform(login);
+                    }
+                });
+
+                loginForm.addEventListener("submit", function(e){
+                    e.preventDefault();
+
+                    let lemail = document.getElementById("lEmail").value;
+                    let lpass = document.getElementById("lPass").value;
+
+                    let userdata = JSON.parse(localStorage.getItem("user"));
+
+                    if(!userdata){
+                        showmess("No User Found Please Register","error",loginMess);
+                        return;
+                    }
+
+                    if(lemail === userdata.email && lpass === userdata.pass){
+                        showmess("Login Successful","success",loginMess);
+                        setTimeout(function(){
+                            window.location.href="index.html";
+                        },2000);
+                    } else {
+                        showmess("Invalid Credentials","error",loginMess);
+                    }
+                });
+
+                forgotForm.addEventListener("submit", function(e){
+                    e.preventDefault();
+
+                    let femail = document.getElementById("femail").value;
+                    let fpass = document.getElementById("fpass").value;
+                    let frepass = document.getElementById("frepass").value;
+
+                    let userdata = JSON.parse(localStorage.getItem("user"));
+
+                    if(!userdata){
+                        showmess("User Not Found","error",forgotMess);
+                        return;
+                    }
+
+                    if(femail !== userdata.email){
+                        showmess("User Not Found","error",forgotMess);
+                        return;
+                    }
+
+                    if(fpass !== frepass){
+                        showmess("Password Mismatch","error",forgotMess);
+                        return;
+                    }
+
+                    userdata.pass = fpass;
+                    localStorage.setItem("user", JSON.stringify(userdata));
+
+                    showmess("Password Changed Successfully","success",forgotMess);
+                    showform(login);
+                });
+
+                function showmess(text,type,target){
+                    target.innerHTML = "";
+                    const msg = document.createElement("p");
+                    msg.textContent = text;
+                    msg.classList.add(type);
+                    target.appendChild(msg);
+                    setTimeout(function(){
+                        msg.remove();
+                    },3000);
+                }
+                
+                showform(login);
+            });
+        </script>
+    </body>
+</html>
